@@ -1,0 +1,34 @@
+@page "/login"
+
+<div class="container">   
+   <div class="row">      
+      <div class="col-4">
+         <h5 class="text-center">Sistema de Gerenciamento de Barbearia</h5>
+         <h6 class="text-center">Acesso ao Sistema</h6>
+         <input type="email" class="form-control" placeholder="digite o email"/>
+         <input type="password" class="form-control" placeholder="digite a senha"/>
+         <button class="form-control" @onclick="LogarSistema">Acessar</button>
+       
+              <div class="alert alert-success" role="alert">
+                 @msg
+              </div>
+     
+        
+      </div>
+   </div> 
+</div>
+
+@code{
+    private string? msg="";
+    
+    private void LogarSistema(){
+        msg = "Logado com sucesso!";
+    }
+    
+}
+
+
+
+
+
+
